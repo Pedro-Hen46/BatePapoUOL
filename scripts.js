@@ -14,6 +14,12 @@ function telaLogin(){
     } else alert ('Por favor entre com o nome de usuario antes.');
    
 }
+function selecionaVisibilidade(elementoclicado){
+    
+    elementoclicado.classList.toggle('negrito');
+}
+
+
 
 function EntrarServidor(usuario){    
     let Dados = {name: usuario}; 
@@ -24,13 +30,9 @@ function EntrarServidor(usuario){
 }
 
 function tratarSucesso(autenticacao){
-        buscardados();
-        setInterval(ContinuaSala,5000);
-
-        //tentando renderizar usuarios disponiveis.
-        const promessaUsuarios = axios.get("https://mock-api.driven.com.br/api/v6/uol/participants");
-        promessaUsuarios.then(sidebarmenu);
         
+        buscardados();
+        setInterval(ContinuaSala,3000);
 }
 
 function erroaoConectar(erro){
@@ -49,7 +51,7 @@ function erroaoConectar(erro){
 
 function buscardados(){
 
-        const promessa = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages");
+        const promessa = axios.get("https://mock-api.driven.com.br/api/v6/uol/messages"); 
         promessa.then(processarResposta);   
     
 }
@@ -63,9 +65,10 @@ function processarResposta(resposta){
     let texto = document. querySelector(".texto");
     let mensagem = document.querySelector(".conversa");
     let reservada= document.querySelector(".reservada");   
-
+    
     let TamanhoVetor = resposta.data.length;
     const Sala=document.querySelector(".bate-papo");
+
 
     Sala.innerHTML = '';
 
@@ -73,7 +76,7 @@ function processarResposta(resposta){
         nome = resposta.data[i].from;
         hora = "(" + resposta.data[i].time + ")";
         texto = resposta.data[i].text;
-      
+
             if (resposta.data[i].type==="status"){ //IF PARA MENSAGEM DE STATUS DO SERVIDOR, AO ENTRAR E SAIR DA SALA
                  Sala.innerHTML += `<div class="status" id="Mensagem${i}">
                 <p><span class="hora">${hora}</span> <span class="nome">${nome} </span> <span class="texto">${texto}</span></p>
@@ -90,9 +93,7 @@ function processarResposta(resposta){
                     <p><span class="hora">${hora}</span> <span class="nome">${nome} </span> reservadamente para <span class="para">${resposta.data[i].to}</span>: ${texto}</p>
                     </div>`
                 } 
-            }
-
-            
+            }   
     } 
     
     const elementoQueQueroQueApareca = document.getElementById("Mensagem99");
@@ -104,7 +105,7 @@ function ContinuaSala(){
     let permanencia = {name: NomeUsuario}
     const requisicao = axios.post("https://mock-api.driven.com.br/api/v6/uol/status", permanencia);
     
-    const verificandoAtt = setInterval(buscardados,5000); //Buscando mensagens a cada 5s (ainda testando) **Travando meu navegador**
+    const verificandoAtt = setInterval(buscardados,3000); //Buscando mensagens a cada 5s (ainda testando) **Travando meu navegador**
 }
 
 function EnviarMensagem(){ 
@@ -143,8 +144,7 @@ function ErroMensagem(){
     
     menu.classList.remove('none');
 
-    console.log(response);
-
+    
   }
 
   function sidebarOff(){

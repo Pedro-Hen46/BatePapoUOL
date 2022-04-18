@@ -7,6 +7,9 @@
 body{
     font-family: 'Roboto';
     font-weight: 300;
+
+    justify-content: center;
+    z-index: 0;
 }
 h4{
     font-weight: 300;
@@ -82,6 +85,9 @@ h3{
     background-color:#f3f3f3;
     z-index: 0;
     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contents-inferior{
@@ -195,11 +201,14 @@ input{
 }
 .participante{
     display: flex;
-    align-items: center;
-}
-.participante > div{
-    display: flex;
     flex-direction: column;
+}
+.participante  div{
+    display: flex;
+    flex-direction: inline;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+    align-items: center;
 }
 .button-sidebar{
     width: 100%;

@@ -39,8 +39,30 @@
             <h4>Escolha um contato para enviar mensagem</h4>
 
             <div class="participante">
-                <ion-icon class='sidebar-user pointer' name="people-outline"></ion-icon>
-                <span class="font-normal pointer">Todos</span>
+                <div>
+                    <ion-icon class='sidebar-user pointer' name="people-outline"></ion-icon>
+                    <span class="font-normal negrito pointer">Todos</span>
+                </div>
+                <div>
+                    <ion-icon class='sidebar-user pointer' name="people-circle-outline"></ion-icon>
+                    <span class="font-normal pointer">Ana</span>
+                </div>
+                <div>
+                    <ion-icon class='sidebar-user pointer' name="people-circle-outline"></ion-icon>
+                    <span class="font-normal pointer">Otavio</span>
+                </div>
+                <div>
+                    <ion-icon class='sidebar-user pointer' name="people-circle-outline"></ion-icon>
+                    <span class="font-normal pointer">Arthur</span>
+                </div>
+                <div>
+                    <ion-icon class='sidebar-user pointer' name="people-circle-outline"></ion-icon>
+                    <span class="font-normal pointer">Kathllen</span>
+                </div>
+                
+            </div>
+            <div class="nomesparticipantes">
+
             </div>
         
             <div class="visibilidade">
@@ -49,11 +71,12 @@
                 <div class="participante">
                     <div>
                         <ion-icon class='sidebar-user pointer' name="lock-open-outline"></ion-icon>
-                        <span class="font-normal pointer">Publico</span><br>
-                  
-                  
+                        <span class="font-normal negrito pointer" id="visibilidade1">Publico</span><br>
+                    </div>
+                    
+                    <div>
                     <ion-icon class='sidebar-user pointer' name="lock-closed-outline"></ion-icon>
-                    <span class="font-normal pointer">Reservadamente</span>  
+                    <span  onclick="selecionaVisibilidade(this)" class="font-normal pointer">Reservadamente</span>  
                     </div>
                 </div>
                 
