@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="scripts.js"></script>
+</body>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>BatePapo UOL</title>
+</head>
+<body>
+
+    <div class="tela-login"> <!-- TELA DE LOGIN INICIAL DO APP -->
+        <img src="https://static1.purebreak.com.br/articles/6/92/41/6/@/355678-relembre-os-sites-que-faziam-sucesso-na-diapo-1.jpg" class="logo">
+        <h3>ENTRAR NA SALA BATEBAPO UOL.</h3>
+        <div class="tela-input">
+            <input type="text" class="login-input" placeholder="  Qual o seu nick?..." id="login">
+            <button class="button-login" onclick="telaLogin()">ENTRAR</button>
+        </div>
+        <h3>Projeto 05 - Driven BootCamp</h3>
+    </div>
+
+
+    <div class="menu-superior">
+        <div class="contents-superior">
+            <img src="https://static1.purebreak.com.br/articles/6/92/41/6/@/355678-relembre-os-sites-que-faziam-sucesso-na-diapo-1.jpg" class="logo pointer" onclick="recarregaPagina()">
+            <ion-icon class="icones pointer" name="people" onclick="sidebarmenu()"></ion-icon>
+        </div>
+        
+    </div>
+
+    <div class="sidebar-fundo none" >
+        <div class="sidebar-participantes">
+            <h4>Escolha um contato para enviar mensagem</h4>
+
+            <div class="participante">
+                <ion-icon class='sidebar-user pointer' name="people-outline"></ion-icon>
+                <span class="font-normal pointer">Todos</span>
+            </div>
+        
+            <div class="visibilidade">
+                <h4>Será visivel de que forma?</h4>
+
+                <div class="participante">
+                    <div>
+                        <ion-icon class='sidebar-user pointer' name="lock-open-outline"></ion-icon>
+                        <span class="font-normal pointer">Publico</span><br>
+                  
+                  
+                    <ion-icon class='sidebar-user pointer' name="lock-closed-outline"></ion-icon>
+                    <span class="font-normal pointer">Reservadamente</span>  
+                    </div>
+                </div>
+                
+            </div>
+
+            <button class="button-sidebar" onclick="sidebarOff()">SELECIONADO</button>
+        
+        </div>
+
+        
+    </div>
+
+    <div class="bate-papo">
+
+        <!-- Mensagens da sala -->
+
+    </div>
+
+
+    <!--Finalizando parte de mensagens-->
+    <div class="menu-inferior">
+        <div class="contents-inferior">
+            <input class="inputMessage pointer" type="text" placeholder="Escreva aqui...">
+            <ion-icon onclick="EnviarMensagem()" class="sendMessage pointer" name="paper-plane-outline"></ion-icon>
+        </div>
+    </div>
+
+
+    <script src="scripts.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+</html>

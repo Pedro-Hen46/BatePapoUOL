@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+body{
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+h4{
+    font-weight: 300;
+    font-size: 26px;
+}
+.font-normal{
+    font-weight: 300;   
+}
+.negrito{
+    font-weight: 700;
+}
+.tela-login{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.none{
+    display: none;
+}
+.button-login{
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: orange;
+}
+.button-login:hover{
+    background-color: lightgreen;
+    color: white;
+    cursor: pointer;
+}
+
+h3{
+    margin-top: 20%;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+.tela-input{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    
+}
+.menu-superior{
+    width: 100%;
+    height: 80px;
+    
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 0.3em rgba(0,0,0,0.7);
+}
+.contents-superior{
+    width: auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.bate-papo{
+    width: 100%;
+    height: 70%;
+    padding-top: 62px;
+    margin-bottom: 82px;
+    background-color:#f3f3f3;
+    z-index: 0;
+    
+}
+
+.contents-inferior{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 4%;
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+}
+.icones{
+    font-size: 48px;
+    color: black;
+}
+
+.menu-inferior{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 0 0.3em rgba(0,0,0,0.7);
+}
+.login-input{ /* INPUT DE ENTRADA DE NOME LOGIN*/
+    width: 50%;
+    border-radius: 10px;
+    border: thin solid black;
+}
+
+input{
+    border: none;
+    width: 80%;
+    height: 60px;
+    font-size: 20px;
+    
+    font-style: italic;
+
+}
+.display-inline{
+    display: inline;
+}
+.sendMessage{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    color: black;
+}
+.sendMessage:active{
+    color: orange;
+}
+.pointer{
+    cursor: pointer;
+}
+
+.status{
+    background-color: #dcdcdc;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    
+    margin-bottom: 5px;
+}
+.nome,.para{ 
+    font-weight: bold;
+ 
+}
+.hora{
+    font-weight: 300;
+    color: gray;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.reservada{
+    background-color: #FFDEDE;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    height: 40px;
+    
+}
+.texto{
+    flex-wrap: wrap;
+}
+.sidebar-fundo{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+
+}
+.sidebar-user{
+    font-size: 28px;
+    margin-right: 10px;
+}
+.participante{
+    display: flex;
+    align-items: center;
+}
+.participante > div{
+    display: flex;
+    flex-direction: column;
+}
+.button-sidebar{
+    width: 100%;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.button-sidebar:hover{
+    font-weight: bold;
+    background-color: lightgreen;
+}
+.sidebar-participantes{
+    width: 70%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 35px;
+    
+
+
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+
+}
