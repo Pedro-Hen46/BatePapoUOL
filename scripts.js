@@ -88,11 +88,10 @@ function processarResposta(resposta){
                 </div>`
             } 
             else {    // ENVIADA DE MANEIRA RESERVADA...
-                if (nome === NomeUsuario){
                     Sala.innerHTML += `<div class="reservada" id="Mensagem${i}" data-identifier="message">
                     <p><span class="hora">${hora}</span> <span class="nome">${nome} </span> reservadamente para <span class="para">${resposta.data[i].to}</span>: ${texto}</p>
                     </div>`
-                } 
+                
             }   
     } 
     
