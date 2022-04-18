@@ -229,7 +229,7 @@ input{
     justify-content: space-between;
     flex-direction: column;
     padding: 0 35px;
-    
+    overflow-y: scroll;
 
 
     background-color: white;
